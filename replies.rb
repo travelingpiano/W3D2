@@ -82,7 +82,7 @@ class Replies
   end
 
   def child_reply
-    data = Replies.instance.execute(<<-SQL,@id)
+    data = QuestionsDatabase.instance.execute(<<-SQL,@id)
       SELECT
         *
       FROM

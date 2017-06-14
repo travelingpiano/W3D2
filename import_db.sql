@@ -33,7 +33,7 @@ CREATE TABLE replies (
 
 CREATE TABLE question_likes (
   id INTEGER PRIMARY KEY,
-  likes BOOLEAN,
+  likes INTEGER,
   users INTEGER NOT NULL,
   questions INTEGER NOT NULL,
   FOREIGN KEY (questions) REFERENCES questions(id),
@@ -52,11 +52,11 @@ VALUES
   ('Tough Question','What is the meaning of life',1),
   ('Easy Question','What is 1+1',2);
 
--- INSERT INTO
---   question_follows (questions,users)
--- VALUES
---   (1,1),
---   (2,2);
+INSERT INTO
+  question_follows (questions,users)
+VALUES
+  (1,1),
+  (2,2);
 
 INSERT INTO
   replies (body,questions,users,replies)

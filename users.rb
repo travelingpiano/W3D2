@@ -50,4 +50,12 @@ class Users
   def authored_replies
     Replies.find_by_users(@id)
   end
+
+  def followed_questions
+    QuestionFollows.followed_questions_for_user_id(@id)
+  end
+
+  def liked_questions
+    QuestionLikes.liked_questions_for_user_id(@id)
+  end
 end
