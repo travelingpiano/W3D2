@@ -76,7 +76,7 @@ class QuestionLikes
       JOIN questions ON question_likes.questions = questions.id
       GROUP BY question_likes.questions
       ORDER BY COUNT(*)
-      LIMIT n
+      LIMIT ?
     SQL
     data.map{|datum| Question.new(datum)} if data
   end

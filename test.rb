@@ -53,3 +53,9 @@ require_relative 'questionlikes'
 #
 # old_user = Users.find_by_name('Bob','Loblaw')
 # p old_user.liked_questions
+
+#HARDER TESTS
+# p QuestionLikes.most_liked_questions(1)
+# p Question.most_liked(1)
+old_user = Users.find_by_name('Bob','Loblaw')
+p old_user.average_karma
